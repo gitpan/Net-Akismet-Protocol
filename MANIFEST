@@ -9,3 +9,4 @@ t/02pod.t
 t/03podcoverage.t
 t/04critic.rc
 t/04critic.t
+t/live.t

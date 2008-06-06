@@ -7,7 +7,7 @@ use integer;
 use LWP::UserAgent;
 use HTTP::Request::Common;
 
-our $VERSION	= '0.01';
+our $VERSION	= '0.02';
 
 has 'url'         => ( isa => 'Str',is=>'rw' );
 has 'key'         => ( isa => 'Str',is=>'rw' );
@@ -189,7 +189,7 @@ Acceptable comment characteristics:
 
 B<Required.>  Represents the IP address of the comment submitter.
 
-=item  comment_user_agent
+=item  user_agent
 
 B<Required.>  User agent string from the comment submitter's request.
 
@@ -236,6 +236,11 @@ This call is intended for the marking of false positives, things that were incor
 
 In case of failed submission returns C<undef>, otherwise - a perl-known truth.
 
+=head1 Internal Moose methods
+
+=head2 meta
+
+=head2 BUILD
 
 =head1 NOTES
 
@@ -260,8 +265,6 @@ comment detail as possible.
 Marcus Ramberg E<lt>mramberg@cpan.orgE<gt>
 
 Based on L<Net::Akismet> by Nikolay Bachiyski E<lt>nbachiyski@developer.bgE<gt>
-
-=back
 
 =head1 LICENSE
 
